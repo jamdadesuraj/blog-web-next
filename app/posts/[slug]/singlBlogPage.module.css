@@ -1,0 +1,122 @@
+.container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 3rem;
+}
+
+.textContainer {
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+  flex: 2;
+}
+
+.title {
+  font-size: 48px;
+  text-align: center;
+}
+
+.user {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 30px;
+}
+.userImg {
+  border-radius: 50%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.views {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.imgContainer {
+  border-radius: 10px;
+  position: relative;
+  height: 300px;
+  width: 100%;
+  flex: 2;
+}
+
+.img {
+  border-radius: 10px;
+  object-fit: contain;
+  background-color: var(--softBg);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.text {
+  flex: 8;
+}
+
+.desc {
+  font-size: 14px;
+  text-align: justify;
+}
+
+.sideBlog {
+  flex: 4;
+}
+
+@media screen and (max-width: 1280px) {
+  .title {
+    font-size: 32px;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+  }
+  .title {
+    font-size: 32px;
+  }
+  .wrapper {
+    flex-direction: column;
+  }
+  .desc {
+    font-size: 14px;
+    padding-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+  .title {
+    font-size: 24px;
+    text-align: center;
+  }
+  .wrapper {
+    flex-direction: column;
+  }
+  .desc {
+    font-size: 14px;
+    padding-top: 2rem;
+    flex: auto;
+  }
+}

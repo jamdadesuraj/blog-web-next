@@ -1,0 +1,146 @@
+.container {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 50px;
+  flex-direction: column;
+  flex: 5;
+}
+
+.title {
+  font-size: 28px;
+}
+
+.content {
+  display: flex;
+  gap: 20px;
+}
+
+.imgContainer {
+  height: 300px;
+  width: 300px;
+  flex: 1;
+  position: relative;
+}
+
+.img {
+  object-fit: cover;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.textContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.date {
+  color: var(--softText);
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.category {
+  color: brown;
+  font-weight: bold;
+}
+
+.titleContent {
+  font-size: 20px;
+}
+
+.desc {
+  color: var(--softText);
+  margin-bottom: 10px;
+  text-align: justify;
+}
+.btn {
+  border-bottom: 1px solid var(--softText);
+  width: max-content;
+  padding: 8px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1280px) {
+  .title {
+    font-size: 42px;
+  }
+  .imgContainer {
+    flex: auto;
+    height: 400px; /* Adjust height for smaller screens */
+  }
+
+  .content {
+    gap: 20px; /* Reduce gap between items */
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .content {
+    gap: 20px; /* Reduce gap between items */
+    flex-direction: column;
+  }
+
+  .imgContainer {
+    flex: auto;
+    height: 300px; /* Adjust height for smaller screens */
+  }
+
+  .contentTitle {
+    font-size: 28px;
+  }
+
+  .contentDesc {
+    font-size: 13px;
+    padding: 1.5rem 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .title {
+    font-size: 30px;
+  }
+
+  .contentTitle {
+    font-size: 24px;
+  }
+
+  .imgContainer {
+    flex: auto;
+    height: 250px; /* Further adjust height */
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 15px; /* Reduce gap for smaller screens */
+  }
+
+  .contentDesc {
+    padding: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .contentTitle {
+    font-size: 20px;
+  }
+
+  .imgContainer {
+    height: 200px; /* Adjust height for very small screens */
+  }
+
+  .contentDesc {
+    font-size: 12px;
+    padding: 0.5rem 0;
+  }
+}

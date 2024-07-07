@@ -1,0 +1,17 @@
+.btn {
+  background-color: var(--btnBg);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: var(--btnColor);
+  width: max-content;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--btnBgHover);
+  color: var(--btnBgHoverColor);
+  transition: 0.5s;
+}

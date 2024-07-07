@@ -1,0 +1,120 @@
+.container {
+  margin-top: 50px;
+  margin-bottom: 60px;
+  padding: 0 1rem; /* Add some padding for smaller screens */
+}
+
+.title {
+  font-size: 55px;
+  margin-bottom: 2rem;
+}
+
+.wrapper {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap; /* Allow items to wrap for smaller screens */
+}
+
+.imgContainer {
+  position: relative;
+  height: 400px;
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden; /* Ensure the border-radius is applied */
+}
+
+.img {
+  object-fit: cover;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.textContainer {
+  flex: 1;
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+}
+
+.contentTitle {
+  font-size: 30px;
+}
+
+.contentDesc {
+  font-size: 14px;
+  color: var(--softText);
+  padding: 2rem 0;
+  text-align: justify;
+}
+
+@media screen and (max-width: 1280px) {
+  .title {
+    font-size: 42px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .wrapper {
+    gap: 20px; /* Reduce gap between items */
+  }
+
+  .imgContainer {
+    height: 300px; /* Adjust height for smaller screens */
+  }
+
+  .contentTitle {
+    font-size: 28px;
+  }
+
+  .contentDesc {
+    font-size: 13px;
+    padding: 1.5rem 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .title {
+    font-size: 30px;
+  }
+
+  .contentTitle {
+    font-size: 24px;
+  }
+
+  .imgContainer {
+    flex: auto;
+    height: 250px; /* Further adjust height */
+  }
+
+  .wrapper {
+    flex-direction: column;
+    gap: 15px; /* Reduce gap for smaller screens */
+  }
+
+  .contentDesc {
+    padding: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .contentTitle {
+    font-size: 20px;
+  }
+
+  .imgContainer {
+    height: 200px; /* Adjust height for very small screens */
+  }
+
+  .contentDesc {
+    font-size: 12px;
+    padding: 0.5rem 0;
+  }
+}

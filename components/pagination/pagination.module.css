@@ -1,0 +1,8 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.btn:disabled {
+  background-color: rgba(220, 20, 60, 0.625);
+  cursor: not-allowed;
+}
