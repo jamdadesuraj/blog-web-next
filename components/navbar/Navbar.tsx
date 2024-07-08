@@ -60,7 +60,7 @@ const Navbar = () => {
         <Link href="/about" className={styles.link}>
           About
         </Link>
-        <Link href="/Contact" className={styles.link}>
+        <Link href="/contact" className={styles.link}>
           Contact
         </Link>
         <AuthLinks />

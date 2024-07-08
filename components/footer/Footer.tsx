@@ -76,13 +76,15 @@ const Footer = () => {
       <div className={styles.wrapper}>
         <div className={styles.textContent}>
           <Image src="/logo.png" alt="logo" width={100} height={100} />
-          <h6 className={styles.title}>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam et
-            aliquid temporibus. Ea magnam cupiditate veritatis non. Earum,
-            dolorum placeat. Lorem ipsum dolor sit, amet consectetur adipisicing
-            elit. Numquam et aliquid temporibus. Ea magnam cupiditate veritatis
-            non. Earum, dolorum placeat.
-          </h6>
+          <p className={styles.title}>
+            Flymore Drone, headquarter in Pune (India), specialises in design
+            and supply of UAV Solutions for variety of applications. Solution
+            for Drone, Aerospace and GIS Industry. Flymore Drone is founded in
+            2020 with a vision of supporting the Aerospace, Indian Defence and
+            Aviation sector in the critical technology solutions. Flymore Drone
+            heavily invested in the indigenous development of Unmanned Aerial
+            Vehicle and Robotics.
+          </p>
           <div className={styles.socialLinks}>
             <Link href="https://www.facebook.com/">
               <Image

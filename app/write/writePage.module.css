@@ -12,12 +12,15 @@
   border-radius: 10px;
   border: 1px solid var(--text);
   outline: none;
+  margin-bottom: 10px;
 }
 .select {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   padding: 10px 20px;
-  margin-left: 50px;
   width: max-content;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .add {
@@ -48,7 +51,7 @@
   gap: 30px;
   position: absolute;
   left: 15rem;
-  top: 17.5rem;
+  top: 23.5rem;
 }
 
 .uploadImg {
@@ -97,15 +100,28 @@
   margin-top: 3rem;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1024px) {
   .addBtnLabels {
     left: 8rem;
   }
 }
 
+@media screen and (max-width: 640px) {
+  .addBtnLabels {
+    left: 12rem;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .addBtnLabels {
-    left: 5rem;
-    top: 20rem;
+    left: 7rem;
+    top: 23.5rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .addBtnLabels {
+    left: 3rem;
+    top: 26.5rem;
   }
 }

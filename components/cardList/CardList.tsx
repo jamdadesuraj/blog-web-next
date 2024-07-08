@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./cardList.module.css";
 import Link from "next/link";
-import Pagination from "@/components/pagination/Pagination";
+import PaginationComp from "../paginationCom/PaginationComp";
 
 interface Card {
   _id: string;
@@ -16,11 +16,12 @@ interface Card {
 
 interface CardProps {
   item: Card;
+  key: string;
 }
 
 const getData = async (page: number, cat: string) => {
   const res = await fetch(
-    `http://localhost:3000/api/posts?page=${page}?cat=${cat || ""}`,
+    `http://localhost:3000/api/posts?page=${page}?cat=${cat} || ""}`,
     {
       cache: "no-store",
     }
@@ -49,7 +50,7 @@ const CardList = async ({ page, cat }: { page: number; cat: string }) => {
         <Card key={item._id} item={item} />
       ))}
 
-      <Pagination page={page} hasPrev={hasPrev} hasNext={hasNext} />
+      <PaginationComp page={page} hasPrev={hasPrev} hasNext={hasNext} />
     </div>
   );
 };
@@ -74,11 +75,12 @@ const Card = ({ key, item }: CardProps) => {
           {item.createdAt.toString().slice(0, 10)} -{" "}
           <span className={styles.category}>{item.catSlug}</span>
         </p>
-        <Link href={`/posts/${item.slug}`} className={styles.btn}>
-          <h2 className={styles.titleContent}>{item.title}</h2>
-        </Link>
+        <h2 className={styles.titleContent}>{item.title.slice(0, 50)}...</h2>
 
-        <p className={styles.desc}>{item.desc}</p>
+        <div
+          className={styles.desc}
+          dangerouslySetInnerHTML={{ __html: item.desc.slice(0, 300) }}
+        />
         <Link href={`/posts/${item.slug}`} className={styles.btn}>
           Read More
         </Link>

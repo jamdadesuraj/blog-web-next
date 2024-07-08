@@ -43,31 +43,52 @@ const SingleBlogPage = async ({ params }: SingleBlogPageProps) => {
       <div className={style.content}>
         <div className={style.textContainer}>
           <h2 className={style.title}>{data.title}</h2>
-          <div className={style.user}>
-            {data?.user?.image && (
-              <Image
-                src={data.user.image}
-                width={50}
-                height={50}
-                alt="user"
-                className={style.userImg}
-              />
-            )}
-            <div className={style.info}>
-              <p>{data?.user?.name}</p>
-              <p>{data.createdAt.slice(0, 10)}</p>
-            </div>
-          </div>
-          <div className={style.views}>
-            <Image
-              src="/views.webp"
-              width={40}
-              height={40}
-              alt="views"
-              title="user views"
-            />
-            <p>{data.views}</p>
-          </div>
+
+          <table className={style.table}>
+            <thead className={style.thead}>
+              <tr>
+                <th>Category</th>
+                <th>Views</th>
+                <th>Views</th>
+              </tr>
+            </thead>
+
+            <tbody className={style.tbody}>
+              <tr>
+                <td className={style.slugTd}>
+                  <p className={style.slug}>{data.catSlug}</p>
+                </td>
+                <td>
+                  <div className={style.views}>
+                    <Image
+                      src="/views.webp"
+                      width={40}
+                      height={40}
+                      alt="views"
+                    />
+                    <p>{data.views}</p>
+                  </div>
+                </td>
+                <td>
+                  <div className={style.user}>
+                    {data?.user?.image && (
+                      <Image
+                        src={data.user.image}
+                        width={50}
+                        height={50}
+                        alt="user"
+                        className={style.userImg}
+                      />
+                    )}
+                    <div className={style.info}>
+                      <p>{data?.user?.name}</p>
+                      <p>{data.createdAt.slice(0, 10)}</p>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <div className={style.imgContainer}>
           {data.img && (

@@ -17,8 +17,9 @@
 
 .title {
   font-size: 14px;
-  font-weight: bold;
+  font-weight: semibold;
   text-align: justify;
+  margin-bottom: 20px;
 }
 
 .socialLinks {

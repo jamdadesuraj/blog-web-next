@@ -47,7 +47,7 @@ const CategoryItems = ({ category }: CategoryProps) => {
     <>
       <Link
         key={category._id}
-        href="/blog?cat=style"
+        href={`/blog?cat=${category.slug}`}
         className={`${styles.category} ${styles[category.slug]}`}
       >
         {category.img && (

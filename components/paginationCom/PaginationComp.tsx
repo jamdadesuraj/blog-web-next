@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import CustomBtn from "../customBtn/CustomBtn";
 import styles from "./pagination.module.css";
 
-const Pagination = ({
+const PaginationComp = ({
   page,
   hasPrev,
   hasNext,
@@ -34,4 +34,4 @@ const Pagination = ({
   );
 };
 
-export default Pagination;
+export default PaginationComp;

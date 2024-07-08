@@ -1,6 +1,7 @@
 .container {
   margin-top: 50px;
   margin-bottom: 50px;
+  padding: 0 20px;
 }
 
 .content {
@@ -8,17 +9,31 @@
   justify-content: space-between;
   gap: 50px;
   margin-bottom: 3rem;
+  flex-wrap: wrap;
 }
 
 .textContainer {
   display: flex;
-  gap: 50px;
+  gap: 10px;
   flex-direction: column;
   flex: 2;
 }
 
 .title {
-  font-size: 48px;
+  font-size: 35px;
+  margin-bottom: 2rem;
+}
+
+.table {
+  background-color: var(--softBg);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.thead,
+.tbody {
+  background-color: var(--bg);
+  height: 50px;
   text-align: center;
 }
 
@@ -26,8 +41,10 @@
   display: flex;
   gap: 20px;
   align-items: center;
-  margin: 30px;
+  justify-content: center;
+  margin: 10px 30px;
 }
+
 .userImg {
   border-radius: 50%;
 }
@@ -37,9 +54,27 @@
   flex-direction: column;
   gap: 5px;
 }
+
+.slugTd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.slug {
+  background-color: crimson;
+  width: max-content;
+  padding: 5px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #fff;
+}
+
 .views {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 5px;
 }
 
@@ -53,14 +88,17 @@
 
 .img {
   border-radius: 10px;
-  object-fit: contain;
+  object-fit: cover;
   background-color: var(--softBg);
+  width: 100%;
+  height: 100%;
 }
 
 .wrapper {
   display: flex;
   justify-content: space-between;
   gap: 50px;
+  flex-wrap: wrap;
 }
 
 .text {
@@ -68,7 +106,7 @@
 }
 
 .desc {
-  font-size: 14px;
+  font-size: 16px;
   text-align: justify;
 }
 
@@ -81,9 +119,7 @@
     font-size: 32px;
   }
   .content {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    gap: 30px;
   }
 }
 
@@ -93,6 +129,7 @@
   }
   .title {
     font-size: 32px;
+    text-align: center;
   }
   .wrapper {
     flex-direction: column;
@@ -100,6 +137,10 @@
   .desc {
     font-size: 14px;
     padding-top: 2rem;
+  }
+  .imgContainer {
+    height: 4cqmin;
+    flex: auto;
   }
 }
 
@@ -118,5 +159,37 @@
     font-size: 14px;
     padding-top: 2rem;
     flex: auto;
+  }
+  .imgContainer {
+    height: 350px;
+    flex: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 20px;
+    text-align: center;
+  }
+  .user {
+    flex-direction: column;
+    text-align: center;
+  }
+  .userImg {
+    width: 40px;
+    height: 40px;
+  }
+  .imgContainer {
+    height: 250px;
+    flex: auto;
+  }
+  .desc {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .table {
+    display: none;
   }
 }
